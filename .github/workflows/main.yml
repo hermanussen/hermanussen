@@ -26,12 +26,12 @@ jobs:
     - name: Generate image
       run: node app.js
 
-    - name: Git Commit and Push
-      uses: github-actions-x/commit@v2.6
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v4
       with:
-        # Github Token with commit access
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        # Specify commit message
-        commit-message: Updated rendered image automatically
-        # Specific files to add.
-        files: result.gif
+        author_name: Github action (Robin Hermanussen)
+        author_email: hermanussen@hotmail.com
+        message: "Updated rendered image automatically"
+        add: "result.gif"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

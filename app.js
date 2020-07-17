@@ -16,7 +16,8 @@ fs.readFile(__dirname + '/robin.png', function(err, data) {
     const encoder = new GIFEncoder(width, height);
 
     // stream the results as they are available into result.gif
-    encoder.createReadStream().pipe(fs.createWriteStream('result.gif'));
+    let outputFileName = 'result.gif';
+    encoder.createReadStream().pipe(fs.createWriteStream(outputFileName));
 
     encoder.start();
     encoder.setRepeat(0);   // 0 for repeat, -1 for no-repeat
@@ -106,4 +107,8 @@ fs.readFile(__dirname + '/robin.png', function(err, data) {
     }
     
     encoder.finish();
+
+    var stats = fs.statSync(outputFileName);
+    var mtime = stats.mtime;
+    console.log(`Finished writing to ${outputFileName} (mtime=${mtime})`);
 });
