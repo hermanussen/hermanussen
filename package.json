@@ -1,0 +1,10 @@
+{
+  "name": "hermanussen",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Robin Hermanussen",
+  "license": "MIT",
+  "dependencies": {
+    "gifencoder": "^2.0.1"
+  }
+}
