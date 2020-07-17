@@ -20,6 +20,9 @@ jobs:
         # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
         node-version: 10.7.0
 
+    - name: Install modules
+      run: node app.js
+
     - name: Generate image
       run: node app.js
 
