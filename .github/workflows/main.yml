@@ -27,7 +27,7 @@ jobs:
       with:
         # Github Token with commit access
         github-token: ${{ secrets.GITHUB_TOKEN }}
-            # Specify commit message
-            commit-message: Updated rendered image automatically
-            # Specific files to add.
-            files: result.png
+        # Specify commit message
+        commit-message: Updated rendered image automatically
+        # Specific files to add.
+        files: result.png
