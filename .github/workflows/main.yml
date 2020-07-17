@@ -21,7 +21,7 @@ jobs:
         node-version: 10.7.0
 
     - name: Install modules
-      run: node app.js
+      run: npm install
 
     - name: Generate image
       run: node app.js
