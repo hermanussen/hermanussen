@@ -34,4 +34,4 @@ jobs:
         # Specify commit message
         commit-message: Updated rendered image automatically
         # Specific files to add.
-        files: result.png
+        files: result.gif
